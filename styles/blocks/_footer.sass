@@ -1,0 +1,58 @@
+.\@footer
+    .line
+        display: flex
+        align-items: center
+        padding: 20px 40px
+        @include tablet
+            padding: 15px 0
+    .top 
+        @include tablet
+            display: none
+
+    .menu
+        flex-grow: 1
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        margin-left: -16px
+        .item 
+            padding: 16px
+            font-size: 18px
+            color: #000
+            text-decoration: none
+            &:hover
+                color: $purple
+    .logo 
+        img 
+            width: 75px
+            min-width: 75px
+            display: block
+    .bottom 
+        border-top: 1px solid #ccc
+        .line
+            grid-gap: 15px
+            @include tablet-s 
+                flex-direction: column
+
+    .copyright
+        flex-grow: 1
+        text-align: left
+    .icons
+        display: flex
+        grid-gap: 15px
+        align-items: center
+        @include tablet
+            grid-gap: 5px
+        .item 
+            text-decoration: none
+            display: flex
+            padding: 7px
+            &:hover
+                img 
+                    opacity: .8
+            img 
+                width: 40px
+                min-width: 40px
+
+
+    
