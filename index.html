@@ -19,23 +19,23 @@
               <i></i>
             </button>
             <nav class="list">
-              <a href="" class="item">תיב</a>
-              <a href="" class="item">דבר המנכ”ל</a>
-              <a href="" class="item">התהליך</a>
-              <a href="" class="item">שאלות נפוצות</a>
-              <a href="" class="item">יצירת קשר</a>
+              <a href="#home" class="item" onclick="document.querySelector('.burger-button').classList.remove('active')">תיב</a>
+              <a href="#person" class="item" onclick="document.querySelector('.burger-button').classList.remove('active')">דבר המנכ”ל</a>
+              <a href="#process" class="item" onclick="document.querySelector('.burger-button').classList.remove('active')">התהליך</a>
+              <a href="#faq" class="item" onclick="document.querySelector('.burger-button').classList.remove('active')">שאלות נפוצות</a>
+              <a href="#contacts" class="item" onclick="document.querySelector('.burger-button').classList.remove('active')">יצירת קשר</a>
             </nav>
           </div>
           <div class="logo">
             <img src="./images/logo.svg" alt="" />
           </div>
           <nav class="menu">
-            <a href="#" class="item">תיב</a>
-            <a href="#" class="item">דבר המנכ”ל</a>
-            <a href="#" class="item">התהליך</a>
+            <a href="#home" class="item">תיב</a>
+            <a href="#person" class="item">דבר המנכ”ל</a>
+            <a href="#process" class="item">התהליך</a>
             <a href="#" class="item">בלוגאסט</a>
-            <a href="#" class="item">שאלות נפוצות</a>
-            <a href="#" class="item">יצירת קשר</a>
+            <a href="#faq" class="item">שאלות נפוצות</a>
+            <a href="#contacts" class="item">יצירת קשר</a>
           </nav>
           <button href="" class="action :button">תן לי הצעה</button>
         </div>
@@ -43,6 +43,7 @@
     </header>
 
     <main class="@home">
+      <span id="home" class="anchor"></span>
       <!-- hero mobile -->
       <section class="hero-block-mobile">
         <div class=":container">
@@ -91,6 +92,7 @@
       </section>
 
       <!-- person -->
+      <span id="person" class="anchor"></span>
       <section class="person-block">
         <img src="./images/curve-top.svg" alt="" loading="lazy" class="curve curve-top" />
         <div class=":container">
@@ -152,6 +154,7 @@
       </section>
 
       <!-- boxes -->
+      <span id="process" class="anchor"></span>
       <div class="boxes-block">
         <div class=":container">
           <h2 class="block-heading mobile">תהליך העבודה</h2>
@@ -440,7 +443,75 @@
         </div>
       </div>
 
+      <!-- offer -->
+      <span id="offer" class="anchor"></span>
+      <section class="offer-block">
+        <div class=":container">
+          <div class="box">
+            <div class="about">
+              <h1 class="heading small">הצעה למופת</h1>
+              <p class="desc">
+                רגע, כדאי קודם לראות הצעה לדוגמא כדי להבין איך ניראות הצעות המחיר שלי בכללי. לאחר מכן יהיה לנו יותר קל לדבר :)
+              </p>
+            </div>
+            <picture class="image">
+              <img src="./images/boxes/datacenter.svg" alt="people sitting in circle in the woods" />
+            </picture>
+            <div class="action mobile-hidden">
+              <a href="" class=":button button">הורד הצעה לדוגמא</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- faq -->
+      <span id="faq" class="anchor"></span>
+      <div class="faq-block">
+        <div class=":container">
+          <h2 class="heading">בטח שאלת את עצמך</h2>
+          <p class="desc">
+            קונדימנטום קורוס בליקרה, נונסטי קלובר בריקנה סטום, לפריקך תצטריק לרטי. מוסן מנת. להאמית קרהשק סכעיט דז מא, מנכם למטכין נשואי
+            מנורך.
+          </p>
+          <ul class="faq-list">
+            <li class="item active" data-container>
+              <h3 class="question" onclick="this.closest('[data-container]').classList.toggle('active')">
+                אילו מוצרים דיגיטליים אתה יוצר?
+              </h3>
+              <p class="answer">
+                טוב ששאלת :) יש מגוון רחב מאוד של מוצרים דיגיטליים ואני מתמחה בשלושה סוגים: 1. אתרי אינטרנט 2. אפליקציות 3. ממשקי ניהול.
+              </p>
+            </li>
+            <li class="item" data-container>
+              <h3 class="question" onclick="this.closest('[data-container]').classList.toggle('active')">כמה זמן נמשך כל פרויקט?</h3>
+              <p class="answer">
+                זה כמובן תלוי בסוג העבודה ובהיקף. אני יכול לומר שעיצוב ופיתוח אתר בגודל בינוני לוקח מספר חודשים. המוצר ישרת אתכם שנים רבות
+                לאחר שהפרויקט יסתיים. לכן מומלץ לגשת לפרויקט ממקום נינוח, להנות מהתהליך ולהפיק ממנו את התוצאה הטובה ביותר. כל עיצוב זה
+                הרפתקה :) זוכרים?
+              </p>
+            </li>
+            <li class="item" data-container>
+              <h3 class="question" onclick="this.closest('[data-container]').classList.toggle('active')">איפה אפשר לראות עבודות לדוגמא?</h3>
+              <p class="answer">שלחו הודעה בווטסאפ ותקבלו דוגמאות טריות, של מוצרים שעיצבתי לאחרונה. המספר שלי הוא 052-5561444</p>
+            </li>
+            <li class="item" data-container>
+              <h3 class="question" onclick="this.closest('[data-container]').classList.toggle('active')">כמה עובדים יש בעסק?</h3>
+              <p class="answer">אחד. אני עושה הכול לבד.</p>
+            </li>
+            <li class="item" data-container>
+              <h3 class="question" onclick="this.closest('[data-container]').classList.toggle('active')">האם אתה עובד עם מעצבים אחרים?</h3>
+              <p class="answer">
+                כמובן. אם אתם רגישים לעיצוב וחשוב לכם לראות מספר סקיצות שעוצבו על ידי מעצבים שונים, אפשר לתפור במיוחד בשבילכם הצעת מחיר
+                בהתאמה אישית. אני דואג לאפיין את האתר ולעצב את המבנה הסכמתי שלו. לאחר מכן אני מעביר את זה למספר מעצבים שונים כדי לקבל מגוון
+                סגנונות.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
       <!-- contacts -->
+      <span id="contacts" class="anchor"></span>
       <section class="contacts-block">
         <div class=":container">
           <div class="box">
@@ -517,12 +588,12 @@
               <img src="./images/logo-small.svg" alt="" />
             </div>
             <nav class="menu">
-              <a href="#" class="item">תיב</a>
-              <a href="#" class="item">דבר המנכ”ל</a>
-              <a href="#" class="item">התהליך</a>
+              <a href="#home" class="item">תיב</a>
+              <a href="#person" class="item">דבר המנכ”ל</a>
+              <a href="#process" class="item">התהליך</a>
               <a href="#" class="item">בלוגאסט</a>
-              <a href="#" class="item">שאלות נפוצות</a>
-              <a href="#" class="item">יצירת קשר</a>
+              <a href="#faq" class="item">שאלות נפוצות</a>
+              <a href="#contacts" class="item">יצירת קשר</a>
             </nav>
           </div>
         </div>
@@ -546,8 +617,41 @@
             </nav>
             <div class="copyright">Illustrations by PixelTrue</div>
           </div>
+          <button class="button-up" type="button" data-toTopButton>
+            <img src="./images/icons/arrow-top-white.svg" alt="arrow to top" />
+          </button>
         </div>
       </div>
     </footer>
+    <script>
+      // to top button
+      ;(function () {
+        const button = document.querySelector('[data-toTopButton]')
+
+        function toggleShowButtonHandler() {
+          if (document.documentElement.scrollTop > document.documentElement.clientHeight) {
+            button.classList.add('active')
+          } else {
+            button.classList.remove('active')
+          }
+        }
+        button.addEventListener(
+          'click',
+          function () {
+            document.body.scrollTop = 0
+            document.documentElement.scrollTop = 0
+          },
+          { passive: true }
+        )
+
+        document.addEventListener(
+          'scroll',
+          function () {
+            toggleShowButtonHandler()
+          },
+          { passive: true }
+        )
+      })()
+    </script>
   </body>
 </html>

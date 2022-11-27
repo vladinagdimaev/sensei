@@ -15,6 +15,7 @@
 html, body {
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -23,7 +24,6 @@ body {
   color: #000;
   line-height: 1.5;
   font-size: 14px;
-  scroll-behavior: smooth;
   direction: rtl;
 }
 
@@ -312,6 +312,38 @@ body {
 .\@footer .icons .item img {
   width: 40px;
   min-width: 40px;
+}
+.\@footer .button-up {
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  border: 0;
+  background-color: #866694;
+  position: fixed;
+  z-index: 9;
+  bottom: 50px;
+  right: 50px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  cursor: pointer;
+}
+@media screen and (max-width: 1240px) {
+  .\@footer .button-up {
+    display: none !important;
+  }
+}
+.\@footer .button-up:hover {
+  background-color: #f0f;
+}
+.\@footer .button-up.active {
+  display: flex;
+}
+.\@footer .button-up img {
+  width: 22px;
+  min-width: 22px;
+  z-index: 9;
 }
 
 .\@home .hero-block-mobile {
@@ -776,6 +808,231 @@ body {
 }
 .\@home .boxes-block .box .params .label {
   font-weight: 600;
+}
+.\@home .offer-block {
+  position: relative;
+  z-index: 2;
+}
+@media screen and (max-width: 1240px) {
+  .\@home .offer-block {
+    padding: 50px 0;
+  }
+}
+.\@home .offer-block .box {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-rows: auto auto 1fr;
+  grid-gap: 0 50px;
+  padding-top: 100px;
+  padding-bottom: 70px;
+  align-items: flex-start;
+}
+@media screen and (max-width: 1240px) {
+  .\@home .offer-block .box {
+    grid-template-columns: 1fr;
+    grid-gap: 30px;
+    padding-top: 70px;
+    background-color: #573838;
+    border-radius: 15px;
+    padding: 60px 20px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .\@home .offer-block .box {
+    grid-gap: 15px;
+  }
+}
+.\@home .offer-block .image {
+  grid-row: span 3;
+}
+@media screen and (max-width: 1240px) {
+  .\@home .offer-block .image {
+    display: flex;
+    justify-content: center;
+    grid-row: span 1;
+  }
+}
+.\@home .offer-block .image img {
+  width: 100%;
+}
+@media screen and (max-width: 1240px) {
+  .\@home .offer-block .image img {
+    width: 200px;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .\@home .offer-block .about {
+    padding-bottom: 15px;
+    color: #fff;
+  }
+}
+.\@home .offer-block .heading {
+  margin-top: 0;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 1;
+}
+@media screen and (max-width: 1240px) {
+  .\@home .offer-block .heading {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 1240px) {
+  .\@home .offer-block .heading.small {
+    font-size: 32px;
+  }
+}
+.\@home .offer-block .desc {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1240px) {
+  .\@home .offer-block .desc {
+    font-size: 16px;
+  }
+}
+.\@home .offer-block .desc:last-child {
+  margin-bottom: 0;
+}
+.\@home .offer-block .action {
+  padding-top: 70px;
+}
+@media screen and (max-width: 1240px) {
+  .\@home .offer-block .action {
+    align-items: center;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+}
+.\@home .offer-block .action .button {
+  min-width: 200px;
+}
+@media screen and (max-width: 540px) {
+  .\@home .offer-block .action .button {
+    min-width: 75vw;
+  }
+}
+.\@home .faq-block {
+  background-color: #f4eaf4;
+  padding: 80px 0 60px;
+}
+@media screen and (max-width: 1240px) {
+  .\@home .faq-block {
+    padding: 40px 0 30px;
+  }
+}
+.\@home .faq-block .heading {
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 1240px) {
+  .\@home .faq-block .heading {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+}
+.\@home .faq-block .desc {
+  font-size: 24px;
+  margin-top: 0;
+  margin-bottom: 28px;
+}
+@media screen and (max-width: 1240px) {
+  .\@home .faq-block .desc {
+    font-size: 16px;
+  }
+}
+.\@home .faq-block .faq-list {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  margin-top: 0;
+  padding-right: 0;
+}
+.\@home .faq-block .faq-list .item {
+  padding: 15px 20px;
+  border-radius: 8px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.\@home .faq-block .faq-list .item.active {
+  padding: 30px 20px;
+  background-color: #b47ecc;
+  color: #fff;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 1240px) {
+  .\@home .faq-block .faq-list .item.active {
+    padding: 20px 15px;
+    margin-bottom: 15px;
+  }
+}
+.\@home .faq-block .faq-list .item.active .question {
+  font-weight: 600;
+}
+.\@home .faq-block .faq-list .item.active .question::after {
+  filter: brightness(0) invert(1);
+  transform: scaleY(-1);
+}
+.\@home .faq-block .faq-list .item.active .answer {
+  display: block;
+}
+.\@home .faq-block .faq-list .item .question {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1.3;
+}
+@media screen and (max-width: 1240px) {
+  .\@home .faq-block .faq-list .item .question {
+    font-size: 20px;
+  }
+}
+.\@home .faq-block .faq-list .item .question::after {
+  content: "";
+  width: 15px;
+  min-width: 15px;
+  height: 15px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 7px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+  background-image: url(./../images/icons/angle-down-purple.svg);
+}
+@media screen and (max-width: 1240px) {
+  .\@home .faq-block .faq-list .item .question::after {
+    margin-left: 0;
+    margin-right: 10px;
+    margin-top: 4px;
+  }
+}
+.\@home .faq-block .faq-list .item .answer {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  margin-top: 15px;
+  display: none;
+}
+@media screen and (max-width: 1240px) {
+  .\@home .faq-block .faq-list .item .answer {
+    font-size: 16px;
+  }
+}
+.\@home .faq-block .faq-list .item .answer:last-child {
+  margin-bottom: 0;
 }
 .\@home .contacts-block {
   padding: 80px 0 30px;
