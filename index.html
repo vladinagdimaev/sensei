@@ -7,6 +7,12 @@
     <title>Sensei - עיצוב מוצרים דיגיטליים</title>
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon" />
+    <script>
+      function scrollToSection(sectionId) {
+        const section = document.querySelector(`#${sectionId}`);
+        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    </script>
   </head>
   <body>
     <header class="@header">
@@ -37,7 +43,7 @@
             <a href="#faq" class="item">שאלות נפוצות</a>
             <a href="#contacts" class="item">יצירת קשר</a>
           </nav>
-          <button href="" class="action :button">תן לי הצעה</button>
+          <button href="#offer" class="action :button" onclick="scrollToSection('offer')">תן לי הצעה</button>
         </div>
       </div>
     </header>
@@ -60,7 +66,7 @@
               <img src="./images/defence.svg" alt="Defence" />
             </picture>
             <div class="action">
-              <a href="" class=":button button">קח אותי ;)</a>
+              <a href="#person" class=":button button" onclick="scrollToSection('person')">קח אותי ;)</a>
             </div>
           </div>
         </div>
@@ -85,7 +91,7 @@
               <p class="desc">בסוף תקבלו אתר אינטרנט עוצר נשימה, ומיד לאחר מכן תתחיל הרפתקה חדשה של למידה ושיפור מתמיד.</p>
             </div>
             <div class="action mobile-hidden">
-              <a href="" class=":button button">קח אותי ;)</a>
+              <a href="#person" class=":button button" onclick="scrollToSection('person')">קח אותי ;)</a>
             </div>
           </div>
         </div>
@@ -142,7 +148,7 @@
                 <p class="desc">אתרים זו המומחיות שלי. גם כאן יש תהליך עבודה. לחצו על הכפתור כדי לגלות איך זה עובד.</p>
               </div>
               <div class="action">
-                <a href="" class=":button button">ככה זה עובד</a>
+                <a href="#process" class=":button button" onclick="scrollToSection('process')">ככה זה עובד</a>
               </div>
             </div>
           </div>
@@ -602,13 +608,13 @@
         <div class=":container">
           <div class="line">
             <nav class="icons">
-              <a href="" class="item">
+              <a href="malito:vladinagdimaev@gmail.com" class="item">
                 <img src="./images/icons/email.svg" alt="" />
               </a>
-              <a href="" class="item">
+              <a href="https://wa.me/972525561444" class="item">
                 <img src="./images/icons/whatsapp.svg" alt="" />
               </a>
-              <a href="" class="item">
+              <a href="https://www.facebook.com/vladi.nagdimaev/" class="item">
                 <img src="./images/icons/fb.svg" alt="" />
               </a>
               <a href="tel:0525561444" class="item">
@@ -627,7 +633,7 @@
       // to top button
       ;(function () {
         const button = document.querySelector('[data-toTopButton]')
-
+    
         function toggleShowButtonHandler() {
           if (document.documentElement.scrollTop > document.documentElement.clientHeight) {
             button.classList.add('active')
@@ -635,6 +641,7 @@
             button.classList.remove('active')
           }
         }
+    
         button.addEventListener(
           'click',
           function () {
@@ -643,7 +650,7 @@
           },
           { passive: true }
         )
-
+    
         document.addEventListener(
           'scroll',
           function () {
