@@ -1,0 +1,146 @@
+.doc-page {
+  margin: 0;
+  background: #fff;
+  color: #202124;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.doc-page *,
+.doc-page *::before,
+.doc-page *::after {
+  box-sizing: border-box;
+}
+
+.doc-main {
+  display: block;
+  width: 100%;
+  padding: 3rem 1.25rem;
+}
+
+.doc-content {
+  width: 100%;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.doc-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #d8dadd;
+}
+
+.doc-title {
+  margin: 0;
+  color: #151617;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  line-height: 1.2;
+}
+
+.doc-updated {
+  margin: 0.75rem 0 0;
+  color: #5f6368;
+  font-size: 0.95rem;
+}
+
+.doc-section {
+  margin-top: 2.25rem;
+}
+
+.doc-heading {
+  margin: 0 0 0.75rem;
+  color: #151617;
+  font-size: 1.5rem;
+  line-height: 1.35;
+}
+
+.doc-subheading {
+  margin: 1.5rem 0 0.5rem;
+  color: #202124;
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+
+.doc-paragraph {
+  margin: 0 0 1rem;
+}
+
+.doc-list {
+  margin: 0 0 1rem;
+  padding-inline-start: 1.5rem;
+}
+
+.doc-list-item {
+  margin-bottom: 0.35rem;
+}
+
+.doc-link {
+  color: #174ea6;
+  text-decoration: underline;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.15em;
+}
+
+.doc-link:hover {
+  color: #123b7d;
+}
+
+.doc-link:focus-visible,
+.doc-table-wrap:focus-visible {
+  outline: 3px solid #174ea6;
+  outline-offset: 3px;
+}
+
+.doc-quote {
+  margin: 1.5rem 0;
+  padding: 0.75rem 1rem;
+  border-inline-start: 4px solid #73777c;
+  background: #f6f7f8;
+  color: #36383a;
+}
+
+.doc-table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: start;
+}
+
+.doc-table-header,
+.doc-table-cell {
+  padding: 0.75rem;
+  border: 1px solid #b8bcc1;
+  text-align: start;
+  vertical-align: top;
+}
+
+.doc-table-header {
+  background: #f1f3f4;
+  color: #151617;
+  font-weight: 700;
+}
+
+@media (max-width: 40rem) {
+  .doc-main {
+    padding: 2rem 1rem;
+  }
+
+  .doc-header {
+    margin-bottom: 2rem;
+  }
+}
+
+@media print {
+  .doc-main {
+    padding: 0;
+  }
+
+  .doc-link {
+    color: inherit;
+  }
+}
