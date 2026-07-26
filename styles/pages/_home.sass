@@ -279,12 +279,19 @@
                 grid-row: span 2
                 display: flex
                 justify-content: center
+                align-items: center
+                height: 320px
+            
                 @include tablet
+                    height: 240px
                     padding-bottom: 25px
-                img 
-                    max-width: 100%
-                    @include tablet
-                        width: 240px
+            
+                img
+                    width: auto
+                    height: auto
+                    max-width: 85%
+                    max-height: 100%
+                    object-fit: contain
             .heading
                 font-size: 32px
                 font-weight: 700
