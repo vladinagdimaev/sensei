@@ -40,8 +40,8 @@ def build() -> None:
         "accessibility.html",
         OUTPUT / "accessibility" / "index.html",
     )
-
-    for directory in ("images", "styles", "scripts", "vcard"):
+    
+    for directory in ("images", "styles", "fonts", "scripts", "vcard"):
         copy_directory(directory)
 
     print("\nBuild completed successfully.")
