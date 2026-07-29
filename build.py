@@ -35,10 +35,10 @@ def build() -> None:
     OUTPUT.mkdir()
 
     copy_page("index.html", OUTPUT / "index.html")
-    copy_page("privacy.html", OUTPUT / "privacy" / "index.html")
+    copy_page("privacy.html", OUTPUT / "privacy.html")
     copy_page(
         "accessibility.html",
-        OUTPUT / "accessibility" / "index.html",
+        OUTPUT / "accessibility.html",
     )
     
     for directory in ("images", "styles", "fonts", "scripts", "vcard"):
