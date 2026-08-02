@@ -1,0 +1,17 @@
+// Open Sans
+@mixin font($path, $name, $weight, $style) {
+    @font-face {
+        font-family: $name;
+        src:
+            // url($path + ".eot?v=1.1.0");
+            // src: url($path + ".eot?#iefix&v=1.1.0") format("embedded-opentype"), 
+            url($path + ".woff2?v=1.1.0") format("woff2"), 
+            url($path + ".woff?v=1.1.0") format("woff"), 
+            url($path + ".ttf?v=1.1.0") format("truetype"); 
+            //  url($path + ".svg?v=1.1.0#Light") format("svg");
+        font-weight: $weight;
+        font-style: $style;
+        font-display: swap;
+    }
+}
+
