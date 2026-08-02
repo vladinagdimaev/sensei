@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      {% block title %}
+        {{ SITENAME }} - {{ SITESUBTITLE }}
+      {% endblock %}
+    </title>
+
+    <link rel="stylesheet" href="{{ SITEURL }}/styles/styles.css" />
+    <link
+      rel="shortcut icon"
+      href="{{ SITEURL }}/images/favicon.svg"
+      type="image/x-icon"
+    />
+
+    {% block head %}{% endblock %}
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main-content">דלגו לתוכן המרכזי</a>
+
+    {% include "includes/header.html" %}
+
+    <main id="main-content">
+      {% block content %}{% endblock %}
+    </main>
+
+    {% include "includes/footer.html" %}
+
+    {% block scripts %}{% endblock %}
+  </body>
+</html>
