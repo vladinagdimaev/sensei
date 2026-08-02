@@ -1,0 +1,31 @@
+<header class="@header">
+  <div class=":container">
+    <div class="line">
+      <div class="mobile-menu">
+        <button class="burger-button" type="button" onclick="this.classList.toggle('active')">
+          <i></i>
+          <i></i>
+          <i></i>
+        </button>
+        <nav class="list">
+          <a href="{{ SITEURL }}/#home" class="item" onclick="document.querySelector('.burger-button').classList.remove('active')">בית</a>
+          <a href="{{ SITEURL }}/#person" class="item" onclick="document.querySelector('.burger-button').classList.remove('active')">לפני שמתחילים</a>
+          <a href="{{ SITEURL }}/#process" class="item" onclick="document.querySelector('.burger-button').classList.remove('active')">המוצרים</a>
+          <a href="{{ SITEURL }}/#faq" class="item" onclick="document.querySelector('.burger-button').classList.remove('active')">שאלות נפוצות</a>
+          <a href="{{ SITEURL }}/#contacts" class="item" onclick="document.querySelector('.burger-button').classList.remove('active')">יצירת קשר</a>
+        </nav>
+      </div>
+      <div class="logo">
+        <img src="./images/logo.svg" alt="" />
+      </div>
+      <nav class="menu">
+        <a href="{{ SITEURL }}/#home" class="item">בית</a>
+        <a href="{{ SITEURL }}/#person" class="item">לפני שמתחילים</a>
+        <a href="{{ SITEURL }}/#process" class="item">המוצרים</a>
+        <a href="{{ SITEURL }}/#faq" class="item">שאלות נפוצות</a>
+        <a href="{{ SITEURL }}/#contacts" class="item">יצירת קשר</a>
+      </nav>
+      <button href="{{ SITEURL }}/#contacts" class="action :button" onclick="scrollToSection('offer')">לתיאום פגישה</button>
+    </div>
+  </div>
+</header>
