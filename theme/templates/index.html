@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="@home">
+    <!-- בשלב הבא נעביר לכאן את תוכן ה-main הקיים -->
+  </div>
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    ;(function () {
+      const button = document.querySelector('[data-toTopButton]')
+
+      if (!button) return
+
+      function toggleShowButtonHandler() {
+        if (
+          document.documentElement.scrollTop >
+          document.documentElement.clientHeight
+        ) {
+          button.classList.add('active')
+        } else {
+          button.classList.remove('active')
+        }
+      }
+
+      button.addEventListener('click', function () {
+        document.body.scrollTop = 0
+        document.documentElement.scrollTop = 0
+      })
+
+      document.addEventListener('scroll', toggleShowButtonHandler, {
+        passive: true,
+      })
+    })()
+  </script>
+{% endblock %}
