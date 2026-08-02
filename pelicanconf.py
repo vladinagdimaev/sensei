@@ -1,12 +1,12 @@
 from pathlib import Path
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent
 
 AUTHOR = "ולדי נגדימייב"
 SITENAME = "Sensei"
 SITESUBTITLE = "עושים סדר לפני אתר חדש"
 
-SITEURL = ""
+SITEURL = "https://sensei.art"
 
 PATH = "content"
 OUTPUT_PATH = "output"
@@ -16,14 +16,17 @@ DEFAULT_LANG = "he"
 
 THEME = str(BASE_DIR / "theme")
 
+# האתר אינו בלוג.
 ARTICLE_PATHS = []
-ARTICLE_SAVE_AS = ""
 ARTICLE_URL = ""
+ARTICLE_SAVE_AS = ""
 
+# דפי התוכן.
 PAGE_PATHS = ["pages"]
 PAGE_URL = "{slug}/"
 PAGE_SAVE_AS = "{slug}/index.html"
 
+# קבצים עסקיים שאינם חלק מהעיצוב.
 STATIC_PATHS = ["static"]
 
 EXTRA_PATH_METADATA = {
@@ -32,12 +35,16 @@ EXTRA_PATH_METADATA = {
     },
 }
 
+# קובצי העיצוב של התבנית יפורסמו תחת /theme/.
 THEME_STATIC_DIR = "theme"
 THEME_STATIC_PATHS = ["static"]
 
+# דף הבית נבנה ישירות מהתבנית index.html.
 DIRECT_TEMPLATES = ["index"]
 PAGINATED_TEMPLATES = {}
+DEFAULT_PAGINATION = False
 
+# אין פידים, ארכיונים, קטגוריות, תגיות או עמודי מחברים.
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
@@ -52,9 +59,7 @@ AUTHOR_SAVE_AS = ""
 AUTHORS_SAVE_AS = ""
 ARCHIVES_SAVE_AS = ""
 
-DEFAULT_PAGINATION = False
-RELATIVE_URLS = True
-
+RELATIVE_URLS = False
 DELETE_OUTPUT_DIRECTORY = True
 LOAD_CONTENT_CACHE = False
 
