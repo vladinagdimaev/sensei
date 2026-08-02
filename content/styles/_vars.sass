@@ -1,0 +1,31 @@
+$magenta: #f0f
+$purple: #866694
+
+
+$font: "Rubik", Arial, "Helvetica Neue", Helvetica, sans-serif
+
+
+
+// media queries
+
+@mixin laptop
+    @media screen and (max-width: 1440px)
+        @content
+@mixin laptop-s
+    @media screen and (max-width: 1350px)
+        @content
+@mixin tablet
+    @media screen and (max-width: 1240px)
+        @content
+@mixin tablet-l
+    @media screen and (max-width: 960px)
+        @content
+@mixin tablet-s
+    @media screen and (max-width: 750px)
+        @content
+@mixin mobile
+    @media screen and (max-width: 540px)
+        @content
+@mixin micro
+    @media screen and (max-width: 360px)
+        @content

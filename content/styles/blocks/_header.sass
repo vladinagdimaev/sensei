@@ -1,0 +1,110 @@
+.\@header
+    position: relative
+    .line 
+        display: flex
+        padding: 30px 0
+        align-items: center
+        @include mobile
+            padding: 15px 0
+    .logo 
+        img 
+            width: 206px
+            min-width: 206px
+            @include micro 
+                width: 170px
+                min-width: 170px
+    .menu 
+        flex-grow: 1
+        justify-content: flex-end
+        display: flex
+        padding: 0 35px
+        @include tablet
+            display: none
+        .item 
+            font-size: 18px
+            padding: 16px
+            font-size: 18px
+            color: #000
+            text-decoration: none
+            &:hover
+                color: $purple
+    .action 
+        @include tablet
+            display: none
+    
+    // 
+    .mobile-menu
+        flex-grow: 1
+        display: none
+        @include tablet
+            display: block
+        &::after
+            content: ''
+            position: absolute
+            z-index: 1
+            width: 55vw
+            min-width: 55vw
+            height: 55vw
+            right: 0
+            top: 0
+            border: 1px solid $magenta
+            border-radius: 50%
+            transform: translate(30%, -55%)
+            display: none
+            @include tablet-s 
+                display: block
+
+        .burger-button
+            display: flex
+            flex-direction: column
+            grid-gap: 10px
+            border: 0
+            padding: 10px
+            background-color: transparent
+            position: relative
+            z-index: 11
+            margin-top: -15px
+            &.active
+                i 
+                    &:nth-child(1)
+                        transform: rotate(45deg)
+                    &:nth-child(3)
+                        transform: rotate(-45deg)
+                    &:nth-child(2)
+                        transform: scaleX(0)
+                        transform-origin: 50%
+                ~
+                    .list 
+                        transform: translateY(0)
+            i 
+                height: 2px
+                width: 34px
+                min-width: 34px
+                transform-origin: 0
+                background-color: $magenta
+                transition: transform .33s
+
+        .list
+            position: fixed
+            z-index: 10
+            top: 0
+            left: 0
+            right: 0
+            background-color: rgba(#000, .92)
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            min-height: 70vh
+            max-height: 100vh
+            overflow: auto
+            transform: translateY(-100%)
+            transition: transform .5s
+            padding: 50px 0
+            .item 
+                font-size: 24px
+                font-weight: 300
+                color: #fff
+                text-decoration: none
+                text-align: center
+                padding: 15px
