@@ -7,6 +7,7 @@ SITENAME = "Sensei"
 SITESUBTITLE = "עושים סדר לפני אתר חדש"
 
 SITEURL = ""
+CANONICAL_SITEURL = "https://sensei.art"
 
 PATH = "content"
 OUTPUT_PATH = "output"
