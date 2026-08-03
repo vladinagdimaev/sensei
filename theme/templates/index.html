@@ -2,7 +2,321 @@
 
 {% block content %}
   <div class="@home">
-    <!-- בשלב הבא נעביר לכאן את תוכן ה-main הקיים -->
+    <span id="home" class="anchor"></span>
+          <!-- hero mobile -->
+          <section class="hero-block-mobile">
+            <div class=":container">
+              <div class="box">
+                <div class="about">
+                  <h2 class="sub-heading">אתר חדש הוא</h2>
+                  <h1 class="heading">הרפתקה</h1>
+                  <p class="desc">
+                    אתר חדש דורש עצירה, חשיבה והרבה החלטות בדרך. אני עוזר לכם להתחיל על הנייר, כשהכיוון עדיין גמיש וקל יותר לשינוי.
+                  </p>
+                </div>
+                <picture class="image">
+                  <img src="{{ SITEURL }}/theme/images/defence.svg" alt="Defence" />
+                </picture>
+                <div class="action">
+                  <a href="#person" class=":button button">איך זה עובד?</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- hero -->
+          <section class="hero-block">
+            <div class=":container">
+              <div class="box">
+                <div class="about">
+                  <h1 class="heading small">הכינו את התרמיל</h1>
+                </div>
+                <picture class="image">
+                  <img src="{{ SITEURL }}/theme/images/woodscircle.svg" alt="people sitting in circle in the woods" />
+                </picture>
+                <div class="about-desc">
+                  <p class="desc">
+                    אתר חדש הוא הרפתקה. הוא דורש לעצור, לחשוב, לבחור כיוון ולקבל הרבה החלטות בדרך.
+                  </p>
+                  <p class="desc">
+                    לפני שסוגרים עם מעצב או מפתח, כדאי להבין מה באמת בונים: למי האתר פונה, איזה מסר הוא צריך להעביר, אילו עמודים חשובים בו ומה נכון להשאיר לשלבים הבאים.
+                  </p>
+                  <p class="desc">
+                    אני עוזר לכם להתחיל על הנייר, כשהכיוון עדיין גמיש וקל יותר לשינוי — כדי שתיכנסו לפרויקט האתר עם פחות הימור ויותר שליטה.
+                  </p>
+                </div>
+                <div class="action mobile-hidden">
+                  <a href="#person" class=":button button">איך זה עובד?</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- person -->
+          <span id="person" class="anchor"></span>
+          <section class="person-block">
+            <img src="{{ SITEURL }}/theme/images/curve-top.svg" alt="" loading="lazy" class="curve curve-top" />
+            <div class=":container">
+              <div class="box">
+                <picture class="image">
+                  <source srcset="{{ SITEURL }}/theme/images/person-collage.webp" type="image/webp" />
+                  <img src="{{ SITEURL }}/theme/images/person-collage.png" alt="" loading="lazy" />
+                </picture>
+                <div class="about">
+                  <h2 class="heading">עובדים על הנייר</h2>
+                  <picture class="photo">
+                    <source srcset="{{ SITEURL }}/theme/images/person-photo.webp" type="image/webp" />
+                    <img src="{{ SITEURL }}/theme/images/person-photo.jpg" alt="" loading="lazy" />
+                  </picture>
+                  <div class="info">
+                    <h3 class="sub-heading">למה מתחילים דווקא על הנייר?</h3>
+                    <p class="desc">
+                      כי על הנייר קל יותר לשנות כיוון. אפשר להזיז רעיונות, למחוק החלטות, להשוות אפשרויות ולבדוק כמה דרכים לפני שנכנסים לעיצוב, פיתוח או שיווק בפועל.
+                    </p>
+
+                    <h3 class="sub-heading">מה קורה כשקופצים ישר לביצוע?</h3>
+                    <p class="desc">
+                      ברגע שסוגרים עם ספק, הפרויקט מתחיל לקבל את הצורה של הכלים והשיטה שלו. מומחה וורדפרס יחשוב דרך וורדפרס, מעצב UX יחשוב דרך חוויית משתמש, איש מיתוג יחשוב דרך זהות ושפה, ואיש שיווק יחשוב דרך קמפיינים, מדיה ותוכן.
+                    </p>
+
+                    <h3 class="sub-heading">אז איפה הבעיה?</h3>
+                    <p class="desc">
+                      לכל שיטה יש ערך, אבל השאלה הראשונה צריכה להיות אחרת: מה נכון לאתר שלכם, לעסק שלכם, לקהל שלכם ולתקציב שלכם. לפני שבוחרים דרך ביצוע, כדאי להבין איזו דרך בכלל מתאימה לפרויקט.
+                    </p>
+
+                    <h3 class="sub-heading">למה זה חוסך כסף?</h3>
+                    <p class="desc">
+                      שינוי כיוון במסמך עולה פחות משינוי כיוון אחרי שכבר נבנו עמודים, עוצבו מסכים, נכתבו תכנים, הופקו חומרים או הושקע תקציב בקמפיין. ככל שמתקדמים בביצוע, כל שינוי נעשה כבד יותר.
+                    </p>
+
+                    <h3 class="sub-heading">מה אני עושה בתהליך?</h3>
+                    <p class="desc">
+                      אני עוזר לכם לפרק את הפרויקט לחלקים ברורים: מטרות, קהלים, מסרים, מבנה, עמודים, שאלות פתוחות וסדר עדיפויות. העבודה מתרחשת קודם על הנייר, כשהכול עדיין גמיש ופתוח לבדיקה.
+                    </p>
+
+                    <h3 class="sub-heading">חייבים להמשיך הלאה?</h3>
+                    <p class="desc">
+                      ממשיכים רק אם יש סיבה טובה להמשיך. לפעמים פגישה אחת מספיקה כדי לקבל כיוון. לפעמים כדאי להעמיק למפת דרך, לבדוק הצעות מחיר או להמשיך לליווי צמוד יותר. כל מוצר עומד בפני עצמו, כדי שתוכלו לעצור בנקודה שבה קיבלתם מספיק בהירות.
+                    </p>
+                  </div>
+                  <div class="action">
+                    <a href="#process" class=":button button">יוצאים לדרך</a>
+                  </div>
+                </div>
+              </div>
+              <div class="block-action">
+                <a class=":button big button">הדרך שמתאימה לכם</a>
+              </div>
+            </div>
+            <img src="{{ SITEURL }}/theme/images/curve-bottom.svg" alt="" loading="lazy" class="curve curve-bottom" />
+          </section>
+
+          <!-- boxes -->
+          <span id="process" class="anchor"></span>
+          <div class="boxes-block">
+            <div class=":container">
+              <h2 class="block-heading mobile">הדרך שמתאימה לכם</h2>
+              <div class="box">
+                <h3 class="heading">סימון שביל</h3>
+                <picture class="image">
+                  <img src="{{ SITEURL }}/theme/images/boxes/plan.svg" alt="" loading="lazy" />
+                </picture>
+                <div class="about">
+                  <p class="desc">
+                    הכול מתחיל בצעד הראשון. בפגישה ממוקדת נבחן את המצב, נזהה את השאלה החשובה ביותר ונגדיר את הצעד הבא שכדאי לשקול. לפעמים מספיק לעצור לרגע, להבין מה באמת מנסים להשיג ולצאת עם כיוון ראשוני. המטרה היא להפוך את נקודת הפתיחה לבסיס ברור להמשך הדרך.
+                  </p>
+                  <div class="params">
+                    <div class="param">
+                      <span class="label">עלות:</span>
+                      <span class="value">1,200 ש"ח</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box reverse">
+                <h3 class="heading">מצפן ראשון</h3>
+                <picture class="image">
+                  <img src="{{ SITEURL }}/theme/images/boxes/catalogue.svg" alt="" loading="lazy" />
+                </picture>
+                <div class="about">
+                  <p class="desc">
+                    כשעומדות על הפרק כמה אפשרויות, הבחירה ביניהן עשויה להיות מאתגרת. בתהליך הזה נשווה בין החלופות, נבחן את המשמעויות של כל אחת ונגבש המלצה המבוססת על המטרות, האילוצים והעדיפויות שלכם. השירות מתאים כאשר נדרשת החלטה משמעותית ורוצים לקבל אותה מתוך בחינה מסודרת.
+                  </p>
+                  <div class="params">
+                    <div class="param">
+                      <span class="label">עלות:</span>
+                      <span class="value">2,700 ש"ח</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                <h3 class="heading">מפת דרכים</h3>
+                <picture class="image">
+                  <img src="{{ SITEURL }}/theme/images/boxes/strategy.svg" alt="" loading="lazy" />
+                </picture>
+                <div class="about">
+                  <p class="desc">
+                    רעיון טוב הוא רק נקודת ההתחלה. כאן הופכים אותו לתוכנית פעולה ברורה, עם שלבים, סדרי עדיפויות והמלצות להמשך. השירות מתאים כאשר כבר יודעים לאן רוצים להגיע ומבקשים לבנות תוכנית שתאפשר להתקדם בצורה מסודרת.
+                  </p>
+                  <div class="params">
+                    <div class="param">
+                      <span class="label">עלות:</span>
+                      <span class="value">4,900 ש"ח</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box reverse">
+                <h3 class="heading">יומן מסע</h3>
+                <picture class="image">
+                  <img src="{{ SITEURL }}/theme/images/boxes/customersupport.svg" alt="" loading="lazy" />
+                </picture>
+                <div class="about">
+                  <p class="desc">
+                    לפעמים הערך הגדול ביותר נמצא במה שכבר קרה. השירות מתמקד בלמידה מתוך הדרך שנעשתה, בבחינת ההחלטות שהתקבלו ובאיתור הזדמנויות לשיפור. הוא מתאים למי שכבר נמצא בתוך פרויקט או השלים שלב משמעותי ורוצה לגבש תובנות שיסייעו בהחלטות הבאות.
+                  </p>
+                  <div class="params">
+                    <div class="param">
+                      <span class="label">עלות:</span>
+                      <span class="value">8,900 ש"ח</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- offer -->
+          <span id="offer" class="anchor"></span>
+          <section class="offer-block">
+            <div class=":container">
+              <div class="box">
+                <div class="about">
+                  <h1 class="heading small">רוצים להתחיל בזהירות?</h1>
+                  <p class="desc">
+                    אפשר להתחיל מפגישת כיוון קצרה, בלי להתחייב למסלול ארוך. נבדוק איפה אתם נמצאים, מה כבר ברור, ומה כדאי לברר לפני שמתקדמים לביצוע.
+                  </p>
+                </div>
+                <picture class="image">
+                  <img src="{{ SITEURL }}/theme/images/boxes/datacenter.svg" alt="people sitting in circle in the woods" />
+                </picture>
+                <div class="action mobile-hidden">
+                  <a href="#contacts" class=":button button">לתיאום פגישה</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- faq -->
+          <span id="faq" class="anchor"></span>
+          <div class="faq-block">
+            <div class=":container">
+              <h2 class="heading">שאלות שעולות בדרך</h2>
+              <p class="desc">
+                אספתי בשבילכם שאלות שלקוחות אוהבים לשאול :) ועניתי עליהן בקצרה. מוזמנים לעבור עליהן ואם בכל זאת יישארו לכם שאלות פתוחות, תמיד אפשר לקבל מענה אישי בכל אחד מערוצי הקשר שאתם יכולים לראות בהמשך האתר.
+              </p>
+              <ul class="faq-list">
+                <li class="item" data-container>
+                  <h3 class="question" onclick="this.closest('[data-container]').classList.toggle('active')">
+                    מה בעצם מקבלים?
+                  </h3>
+                  <p class="answer">
+                    זה תלוי במוצר שבוחרים. בפגישת כיוון מקבלים סיכום קצר וכיוון ראשוני. במפת דרך מקבלים מסמך עבודה מפורט יותר. בליווי במסע עובדים לאורך זמן על החלטות, ספקים, הצעות מחיר וכיווני פעולה.
+                  </p>
+                </li>
+                <li class="item" data-container>
+                  <h3 class="question" onclick="this.closest('[data-container]').classList.toggle('active')">האם אתה בונה את האתר בעצמך?</h3>
+                  <p class="answer">
+                    העבודה כאן מתחילה על הנייר. במקרים מסוימים אפשר להמשיך גם לעיצוב, כתיבה, פיתוח או ליווי ספקים, אבל המטרה הראשונה היא להבין מה נכון לבנות לפני שמתחייבים לביצוע.
+                  </p>
+                </li>
+                <li class="item" data-container>
+                  <h3 class="question" onclick="this.closest('[data-container]').classList.toggle('active')">למי זה מתאים?</h3>
+                  <p class="answer">ליזמים ובעלי עסקים שנמצאים לפני אתר חדש, שדרוג אתר קיים, שיחה עם ספקים או קבלת הצעות מחיר, ורוצים להיכנס לתהליך עם יותר סדר ושליטה.</p>
+                </li>
+                <li class="item" data-container>
+                  <h3 class="question" onclick="this.closest('[data-container]').classList.toggle('active')">האם חייבים לעבור את כל המוצרים?</h3>
+                  <p class="answer">כל מוצר עומד בפני עצמו. אפשר להתחיל קטן, לעצור אחרי שמתקבלת מספיק בהירות, או להמשיך למוצר עמוק יותר לפי הצורך.</p>
+                </li>
+                <li class="item" data-container>
+                  <h3 class="question" onclick="this.closest('[data-container]').classList.toggle('active')">אפשר להגיע אחרי שכבר התחלנו לעבוד עם ספק?</h3>
+                  <p class="answer">
+                    כן. לפעמים דווקא באמצע הדרך עולה צורך לעצור, להבין איפה הפרויקט עומד, לבדוק החלטות שכבר התקבלו ולסדר את השיחה מול הספקים.
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- contacts -->
+          <span id="contacts" class="anchor"></span>
+          <section class="contacts-block">
+            <div class=":container">
+              <div class="box">
+                <picture class="image">
+                  <img src="{{ SITEURL }}/theme/images/contacts-illustration.svg" alt="" loading="lazy" />
+                </picture>
+                <div class="about">
+                  <h2 class="heading">שווה להיות בקשר</h2>
+                  <div class="params">
+                    <div class="item">
+                      <span class="icon">
+                        <img src="{{ SITEURL }}/theme/images/icons/contacts/user.svg" alt="" loading="lazy" />
+                      </span>
+                      <span class="label">שם:</span>
+                      <span class="value">ולדי נגדימייב</span>
+                    </div>
+                    <div class="item">
+                      <span class="icon">
+                        <img src="{{ SITEURL }}/theme/images/icons/contacts/id-card.svg" alt="" loading="lazy" />
+                      </span>
+                      <span class="label">תפקיד:</span>
+                      <span class="value">מולטי טאלנט</span>
+                    </div>
+                    <div class="item">
+                      <span class="icon">
+                        <img src="{{ SITEURL }}/theme/images/icons/contacts/phone.svg" alt="" loading="lazy" />
+                      </span>
+                      <span class="label">טלפון:</span>
+                      <span class="value"><a href="tel:0525561444" class="link tel">052-5561444</a></span>
+                    </div>
+                    <div class="item">
+                      <span class="icon">
+                        <img src="{{ SITEURL }}/theme/images/icons/contacts/email.svg" alt="" loading="lazy" />
+                      </span>
+                      <span class="label">מייל:</span>
+                      <span class="value"><a href="mailto:vladinagdimaev@gmail.com" class="link email">vladinagdimaev@gmail.com</a></span>
+                    </div>
+                    <div class="item">
+                      <span class="icon">
+                        <img src="{{ SITEURL }}/theme/images/icons/contacts/mappin.svg" alt="" loading="lazy" />
+                      </span>
+                      <span class="label">מיקום:</span>
+                      <span class="value">חיפה</span>
+                    </div>
+                    <div class="item">
+                      <span class="icon">
+                        <img src="{{ SITEURL }}/theme/images/icons/contacts/fb.svg" alt="" loading="lazy" />
+                      </span>
+                      <span class="label">פייסבוק:</span>
+                      <span class="value"><a href="https://facebook.com/vladi.nagdimaev" class="link">facebook.com/vladi.nagdimaev</a></span>
+                    </div>
+                    <div class="item">
+                      <span class="icon">
+                        <img src="{{ SITEURL }}/theme/images/icons/contacts/globe.svg" alt="" loading="lazy" />
+                      </span>
+                      <span class="label">אתר אינטרנט:</span>
+                      <span class="value">sensei.art</span>
+                    </div>
+                  </div>
+                  <div class="action">
+                    <a href="{{ SITEURL }}/vcard/vcard.vcf" download class=":button button">שמור את הפרטים באנשי הקשר</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
   </div>
 {% endblock %}
 

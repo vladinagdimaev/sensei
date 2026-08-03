@@ -6,7 +6,7 @@ AUTHOR = "ולדי נגדימייב"
 SITENAME = "Sensei"
 SITESUBTITLE = "עושים סדר לפני אתר חדש"
 
-SITEURL = "https://sensei.art"
+SITEURL = ""
 
 PATH = "content"
 OUTPUT_PATH = "output"
