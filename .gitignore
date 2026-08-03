@@ -3,3 +3,5 @@ _temp
 output/
 __pycache__/
 *.py[cod]
+
+node_modules/

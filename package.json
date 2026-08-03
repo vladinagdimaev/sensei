@@ -1,0 +1,19 @@
+{
+  "name": "sensei",
+  "private": true,
+  "scripts": {
+    "build:css": "sass --style=expanded --no-source-map theme/source/styles.sass theme/static/css/styles.css && postcss theme/static/css/styles.css --use autoprefixer --replace --no-map"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "Firefox ESR",
+    "not dead"
+  ],
+  "devDependencies": {
+    "autoprefixer": "10.5.4",
+    "postcss": "8.5.25",
+    "postcss-cli": "11.0.1",
+    "sass": "1.102.0"
+  }
+}

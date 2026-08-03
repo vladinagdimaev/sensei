@@ -27,6 +27,23 @@ body {
   direction: rtl;
 }
 
+.skip-link {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  inset-inline-start: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-120%);
+}
+.skip-link:focus, .skip-link:focus-visible {
+  transform: translateY(1rem);
+  outline: 3px solid #0ff;
+  outline-offset: 3px;
+}
+
 @font-face {
   font-family: "Rubik";
   src: url("./../fonts/rubik/rubik-v21-latin-ext_latin_hebrew-300.woff2?v=1.1.0") format("woff2"), url("./../fonts/rubik/rubik-v21-latin-ext_latin_hebrew-300.woff?v=1.1.0") format("woff"), url("./../fonts/rubik/rubik-v21-latin-ext_latin_hebrew-300.ttf?v=1.1.0") format("truetype");
@@ -959,7 +976,6 @@ body {
   border-radius: 8px;
   -webkit-user-select: none;
      -moz-user-select: none;
-      -ms-user-select: none;
           user-select: none;
 }
 .\@home .faq-block .faq-list .item.active {
