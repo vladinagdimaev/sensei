@@ -1,0 +1,126 @@
+body.coming-soon-page
+    display: flex
+    min-height: 100vh
+    flex-direction: column
+
+    main
+        flex-grow: 1
+
+.coming-soon-header
+    padding: 30px 0
+
+    @include mobile
+        padding: 15px 0
+
+    .logo
+        display: inline-flex
+
+        img
+            display: block
+            width: 206px
+
+            @include micro
+                width: 170px
+
+.\@coming-soon
+    display: flex
+    align-items: center
+    padding: 45px 0 80px
+
+    @include tablet
+        padding: 25px 0 55px
+
+    .hero
+        display: grid
+        grid-template-columns: .85fr 1.15fr
+        align-items: center
+        gap: 70px
+
+        @include tablet
+            grid-template-columns: 1fr
+            gap: 35px
+
+    .about
+        @include tablet
+            text-align: center
+
+    .eyebrow
+        margin: 0 0 12px
+        color: $purple
+        font-size: 20px
+        font-weight: 700
+
+        @include mobile
+            font-size: 17px
+
+    .heading
+        max-width: 540px
+        margin: 0 0 28px
+        font-size: 58px
+        line-height: 1.05
+
+        @include tablet
+            max-width: none
+            font-size: 44px
+
+        @include mobile
+            font-size: 36px
+
+    .desc
+        max-width: 540px
+        margin: 0 0 38px
+        color: #273150
+        font-size: 24px
+
+        @include tablet
+            max-width: 650px
+            margin-right: auto
+            margin-left: auto
+            font-size: 20px
+
+        @include mobile
+            font-size: 17px
+
+    .action
+        min-width: 220px
+
+        @include mobile
+            width: 100%
+
+    .image
+        display: flex
+        justify-content: center
+        padding: 20px 30px 20px 10px
+
+        @include tablet
+            order: -1
+            padding: 0 20px
+
+        @include mobile
+            padding: 0 10px
+
+        img
+            display: block
+            width: 100%
+            max-width: 560px
+            border-radius: 28px
+
+.coming-soon-footer
+    border-top: 1px solid #ccc
+
+    .line
+        display: flex
+        align-items: center
+        gap: 22px
+        padding: 22px 0
+
+        @include tablet-s
+            flex-direction: column
+            gap: 8px
+
+    a
+        color: #000
+        text-decoration: none
+
+        &:hover
+            color: $purple
