@@ -433,15 +433,28 @@
                             transform: scaleY(-1)
                     .answer
                         display: block
-                .question 
+                .question-heading
                     margin-top: 0
                     margin-bottom: 0
+                .question
+                    width: 100%
+                    margin: 0
+                    padding: 0
+                    border: 0
+                    background-color: transparent
+                    color: inherit
+                    font-family: inherit
                     font-weight: 400
                     display: flex
                     justify-content: space-between
                     font-size: 24px
                     cursor: pointer
                     line-height: 1.3
+                    text-align: right
+                    &:focus-visible
+                        outline: 3px solid currentColor
+                        outline-offset: 4px
+                        border-radius: 4px
                     @include tablet
                         font-size: 20px
                     &::after

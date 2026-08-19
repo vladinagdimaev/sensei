@@ -217,31 +217,53 @@
                 כמה תשובות קצרות לשאלות שעולות בדרך כלל לפני שמתחילים. אם נשארה שאלה פתוחה, אפשר פשוט לדבר איתי.
               </p>
               <ul class="faq-list">
-                <li class="item" data-container>
-                  <h3 class="question" onclick="this.closest('[data-container]').classList.toggle('active')">
-                    מה בעצם מקבלים?
+                <li class="item" data-faq-item>
+                  <h3 class="question-heading">
+                    <button type="button" class="question" aria-expanded="false" aria-controls="faq-answer-1" data-faq-button>
+                      מה בעצם מקבלים?
+                    </button>
                   </h3>
-                  <p class="answer">
+                  <p class="answer" id="faq-answer-1" hidden>
                     זה תלוי בעומק העבודה שבוחרים. סימון שביל נותן כיוון וצעד הבא. מצפן ראשון עוזר לבחור בין חלופות. מפת דרכים הופכת את הכיוון לתכנית עבודה מסודרת. ביומן מסע ממשיכים לעבוד יחד כשהפרויקט כבר מתקדם.
                   </p>
                 </li>
-                <li class="item" data-container>
-                  <h3 class="question" onclick="this.closest('[data-container]').classList.toggle('active')">האם אתה בונה את האתר בעצמך?</h3>
-                  <p class="answer">
+                <li class="item" data-faq-item>
+                  <h3 class="question-heading">
+                    <button type="button" class="question" aria-expanded="false" aria-controls="faq-answer-2" data-faq-button>
+                      האם אתה בונה את האתר בעצמך?
+                    </button>
+                  </h3>
+                  <p class="answer" id="faq-answer-2" hidden>
                     נקודת הפתיחה שלי היא התכנון. בהתאם לפרויקט ולמה שנדרש, אפשר לבחון גם המשך לעיצוב, כתיבה, פיתוח, תחזוקה, שיווק או עבודה עם ספקים מתאימים. ההחלטה על הביצוע מגיעה אחרי שהתמונה מתבהרת.
                   </p>
                 </li>
-                <li class="item" data-container>
-                  <h3 class="question" onclick="this.closest('[data-container]').classList.toggle('active')">למי זה מתאים?</h3>
-                  <p class="answer">ליזמים, בעלי עסקים וארגונים שנמצאים לפני אתר חדש, שדרוג אתר קיים, בחירת ספקים או החלטה משמעותית בפרויקט דיגיטלי, ורוצים להיכנס לתהליך עם תמונה ברורה יותר.</p>
+                <li class="item" data-faq-item>
+                  <h3 class="question-heading">
+                    <button type="button" class="question" aria-expanded="false" aria-controls="faq-answer-3" data-faq-button>
+                      למי זה מתאים?
+                    </button>
+                  </h3>
+                  <p class="answer" id="faq-answer-3" hidden>
+                    ליזמים, בעלי עסקים וארגונים שנמצאים לפני אתר חדש, שדרוג אתר קיים, בחירת ספקים או החלטה משמעותית בפרויקט דיגיטלי, ורוצים להיכנס לתהליך עם תמונה ברורה יותר.
+                  </p>
                 </li>
-                <li class="item" data-container>
-                  <h3 class="question" onclick="this.closest('[data-container]').classList.toggle('active')">האם חייבים לעבור את כל המוצרים?</h3>
-                  <p class="answer">כל מוצר עומד בפני עצמו. אפשר להתחיל בפגישה אחת, להמשיך כשמתעורר צורך נוסף, או לבחור מלכתחילה בתהליך עמוק יותר.</p>
+                <li class="item" data-faq-item>
+                  <h3 class="question-heading">
+                    <button type="button" class="question" aria-expanded="false" aria-controls="faq-answer-4" data-faq-button>
+                      האם חייבים לעבור את כל המוצרים?
+                    </button>
+                  </h3>
+                  <p class="answer" id="faq-answer-4" hidden>
+                    כל מוצר עומד בפני עצמו. אפשר להתחיל בפגישה אחת, להמשיך כשמתעורר צורך נוסף, או לבחור מלכתחילה בתהליך עמוק יותר.
+                  </p>
                 </li>
-                <li class="item" data-container>
-                  <h3 class="question" onclick="this.closest('[data-container]').classList.toggle('active')">אפשר להגיע אחרי שכבר התחלנו לעבוד עם ספק?</h3>
-                  <p class="answer">
+                <li class="item" data-faq-item>
+                  <h3 class="question-heading">
+                    <button type="button" class="question" aria-expanded="false" aria-controls="faq-answer-5" data-faq-button>
+                      אפשר להגיע אחרי שכבר התחלנו לעבוד עם ספק?
+                    </button>
+                  </h3>
+                  <p class="answer" id="faq-answer-5" hidden>
                     כן. אפשר לעצור בכל שלב, למפות את המצב, לבחון החלטות שכבר התקבלו ולסדר מחדש את סדרי העדיפויות והשיחה מול הספקים.
                   </p>
                 </li>
@@ -345,6 +367,26 @@
 
       document.addEventListener('scroll', toggleShowButtonHandler, {
         passive: true,
+      })
+    })()
+
+    ;(function () {
+      const buttons = document.querySelectorAll('[data-faq-button]')
+
+      buttons.forEach(function (button) {
+        button.addEventListener('click', function () {
+          const item = button.closest('[data-faq-item]')
+          const answerId = button.getAttribute('aria-controls')
+          const answer = document.getElementById(answerId)
+
+          if (!item || !answer) return
+
+          const willExpand = button.getAttribute('aria-expanded') !== 'true'
+
+          button.setAttribute('aria-expanded', String(willExpand))
+          item.classList.toggle('active', willExpand)
+          answer.hidden = !willExpand
+        })
       })
     })()
   </script>
