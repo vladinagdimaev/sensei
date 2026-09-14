@@ -593,8 +593,45 @@ body {
 .\@home .hero-block .desc:last-child {
   margin-bottom: 0;
 }
+.\@home .hero-block .desc-list {
+  margin: 0 0 20px;
+  padding: 0;
+  list-style: none;
+  font-size: 24px;
+}
+@media screen and (max-width: 540px) {
+  .\@home .hero-block .desc-list {
+    font-size: 18px;
+  }
+}
+.\@home .hero-block .desc-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 6px;
+}
+.\@home .hero-block .desc-list li::before {
+  content: "";
+  width: 15px;
+  min-width: 15px;
+  height: 15px;
+  margin-left: 12px;
+  margin-top: 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+  background-image: url(./../images/icons/angle-down-purple.svg);
+  transform: rotate(90deg);
+}
+@media screen and (max-width: 540px) {
+  .\@home .hero-block .desc-list li::before {
+    margin-top: 6px;
+  }
+}
+.\@home .hero-block .desc-list li:last-child {
+  margin-bottom: 0;
+}
 .\@home .hero-block .action {
-  padding-top: 70px;
+  padding-top: 30px;
 }
 @media screen and (max-width: 1240px) {
   .\@home .hero-block .action {
@@ -730,6 +767,7 @@ body {
 .\@home .person-block .block-action .button {
   width: 593px;
   max-width: 100%;
+  margin: 0;
 }
 .\@home .boxes-block {
   padding-top: 30px;
@@ -848,7 +886,7 @@ body {
   .\@home .offer-block .box {
     grid-template-columns: 1fr;
     grid-gap: 30px;
-    padding-top: 70px;
+    padding-top: 30px;
     background-color: #573838;
     border-radius: 15px;
     padding: 60px 20px;
@@ -914,7 +952,7 @@ body {
   margin-bottom: 0;
 }
 .\@home .offer-block .action {
-  padding-top: 70px;
+  padding-top: 30px;
 }
 @media screen and (max-width: 1240px) {
   .\@home .offer-block .action {
