@@ -5,7 +5,7 @@
         <div class="logo">
           <img src="{{ SITEURL }}/theme/images/logo-small.svg" alt="" />
         </div>
-        <nav class="menu">
+        <nav class="menu" aria-label="ניווט תחתון">
           <a href="{{ SITEURL }}/#home" class="item">בית</a>
           <a href="{{ SITEURL }}/#person" class="item">לפני שמתחילים</a>
           <a href="{{ SITEURL }}/#process" class="item">המוצרים</a>
@@ -18,17 +18,23 @@
   <div class="bottom">
     <div class=":container">
       <div class="line">
-        <nav class="icons">
-          <a href="mailto:vladinagdimaev@gmail.com" class="item">
+        <nav class="icons" aria-label="דרכי יצירת קשר">
+          <a href="mailto:vladinagdimaev@gmail.com" class="item" aria-label="שליחת דוא״ל לוולדי נגדימייב">
             <img src="{{ SITEURL }}/theme/images/icons/email.svg" alt="" />
           </a>
-          <a href="https://wa.me/972525561444" class="item">
+          <a href="https://wa.me/972525561444" class="item" aria-label="פתיחת שיחה עם ולדי ב־WhatsApp">
             <img src="{{ SITEURL }}/theme/images/icons/whatsapp.svg" alt="" />
           </a>
-          <a href="https://www.facebook.com/vladi.nagdimaev/" target="_blank" class="item">
+          <a
+            href="https://www.facebook.com/vladi.nagdimaev/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="item"
+            aria-label="הפרופיל של ולדי ב־Facebook — נפתח בחלון חדש"
+          >
             <img src="{{ SITEURL }}/theme/images/icons/fb.svg" alt="" />
           </a>
-          <a href="tel:0525561444" class="item">
+          <a href="tel:0525561444" class="item" aria-label="חיוג לוולדי נגדימייב">
             <img src="{{ SITEURL }}/theme/images/icons/phone.svg" alt="" />
           </a>
         </nav>
@@ -39,8 +45,8 @@
           <a href="{{ SITEURL }}/accessibility/" rel="noopener noreferrer">הצהרת נגישות</a>
         </div>
       </div>
-      <button class="button-up" type="button" data-toTopButton>
-        <img src="{{ SITEURL }}/theme/images/icons/arrow-top-white.svg" alt="arrow to top" />
+      <button class="button-up" type="button" aria-label="חזרה לראש העמוד" data-toTopButton>
+        <img src="{{ SITEURL }}/theme/images/icons/arrow-top-white.svg" alt="" />
       </button>
     </div>
   </div>

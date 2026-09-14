@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="{{ SITEDESCRIPTION }}" />
 
     <title>
       {% block title %}
@@ -35,6 +36,70 @@
     </main>
 
     {% include "includes/footer.html" %}
+
+    <script>
+      ;(function () {
+        const button = document.querySelector('[data-mobile-menu-button]')
+        const panel = document.querySelector('[data-mobile-menu-panel]')
+
+        if (!button || !panel) return
+
+        const links = panel.querySelectorAll('[data-mobile-menu-link]')
+
+        function setMenuOpen(isOpen) {
+          button.classList.toggle('active', isOpen)
+          button.setAttribute('aria-expanded', String(isOpen))
+          button.setAttribute(
+            'aria-label',
+            isOpen ? 'סגירת תפריט הניווט' : 'פתיחת תפריט הניווט'
+          )
+          panel.setAttribute('aria-hidden', String(!isOpen))
+          panel.toggleAttribute('inert', !isOpen)
+
+          links.forEach(function (link) {
+            if (isOpen) {
+              link.removeAttribute('tabindex')
+            } else {
+              link.setAttribute('tabindex', '-1')
+            }
+          })
+        }
+
+        button.addEventListener('click', function () {
+          setMenuOpen(button.getAttribute('aria-expanded') !== 'true')
+        })
+
+        links.forEach(function (link) {
+          link.addEventListener('click', function () {
+            setMenuOpen(false)
+          })
+        })
+
+        document.addEventListener('keydown', function (event) {
+          if (
+            event.key === 'Escape' &&
+            button.getAttribute('aria-expanded') === 'true'
+          ) {
+            setMenuOpen(false)
+            button.focus()
+          }
+        })
+
+        const desktopQuery = window.matchMedia('(min-width: 1241px)')
+
+        function closeMenuOnDesktop(event) {
+          if (event.matches) setMenuOpen(false)
+        }
+
+        if (desktopQuery.addEventListener) {
+          desktopQuery.addEventListener('change', closeMenuOnDesktop)
+        } else {
+          desktopQuery.addListener(closeMenuOnDesktop)
+        }
+
+        setMenuOpen(false)
+      })()
+    </script>
 
     {% block scripts %}{% endblock %}
   </body>

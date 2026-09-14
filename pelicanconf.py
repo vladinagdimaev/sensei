@@ -5,6 +5,10 @@ BASE_DIR = Path(__file__).resolve().parent
 AUTHOR = "ולדי נגדימייב"
 SITENAME = "Sensei"
 SITESUBTITLE = "עושים סדר לפני אתר חדש"
+SITEDESCRIPTION = (
+    "ייעוץ וליווי בתכנון אתרים: מבהירים קהלים, מסרים, עמודים וסדרי עדיפויות "
+    "על הנייר, לפני שנכנסים לעיצוב, פיתוח או שיווק."
+)
 
 SITEURL = ""
 CANONICAL_SITEURL = "https://sensei.art"

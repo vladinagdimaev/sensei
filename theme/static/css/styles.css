@@ -112,7 +112,11 @@ body {
   cursor: pointer;
 }
 .\:button:hover {
-  background-color: #f0f;
+  background-color: #c000c0;
+}
+.\:button:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 3px;
 }
 .\:button.big {
   font-weight: 400;
@@ -352,7 +356,7 @@ body {
   }
 }
 .\@footer .button-up:hover {
-  background-color: #f0f;
+  background-color: #c000c0;
 }
 .\@footer .button-up.active {
   display: flex;
@@ -569,6 +573,19 @@ body {
     font-size: 32px;
   }
 }
+@media screen and (max-width: 1240px) {
+  .\@home .hero-block .desktop-heading {
+    display: none;
+  }
+}
+.\@home .hero-block .mobile-heading {
+  display: none;
+}
+@media screen and (max-width: 1240px) {
+  .\@home .hero-block .mobile-heading {
+    display: block;
+  }
+}
 .\@home .hero-block .sub-heading {
   margin-top: 0;
   margin-bottom: 10px;
@@ -768,6 +785,10 @@ body {
   width: 593px;
   max-width: 100%;
   margin: 0;
+  cursor: default;
+}
+.\@home .person-block .block-action .button:hover {
+  background-color: #866694;
 }
 .\@home .boxes-block {
   padding-top: 30px;
@@ -886,7 +907,7 @@ body {
   .\@home .offer-block .box {
     grid-template-columns: 1fr;
     grid-gap: 30px;
-    padding-top: 30px;
+    padding-top: 70px;
     background-color: #573838;
     border-radius: 15px;
     padding: 60px 20px;
@@ -952,7 +973,7 @@ body {
   margin-bottom: 0;
 }
 .\@home .offer-block .action {
-  padding-top: 30px;
+  padding-top: 70px;
 }
 @media screen and (max-width: 1240px) {
   .\@home .offer-block .action {
@@ -1018,7 +1039,7 @@ body {
 }
 .\@home .faq-block .faq-list .item.active {
   padding: 30px 20px;
-  background-color: #b47ecc;
+  background-color: #866694;
   color: #fff;
   margin-bottom: 25px;
 }

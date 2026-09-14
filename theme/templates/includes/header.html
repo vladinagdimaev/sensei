@@ -1,24 +1,38 @@
 <header class="@header">
   <div class=":container">
     <div class="line">
-      <div class="mobile-menu">
-        <button class="burger-button" type="button" onclick="this.classList.toggle('active')">
-          <i></i>
-          <i></i>
-          <i></i>
+      <div class="mobile-menu" data-mobile-menu>
+        <button
+          class="burger-button"
+          type="button"
+          aria-label="פתיחת תפריט הניווט"
+          aria-expanded="false"
+          aria-controls="mobile-navigation"
+          data-mobile-menu-button
+        >
+          <i aria-hidden="true"></i>
+          <i aria-hidden="true"></i>
+          <i aria-hidden="true"></i>
         </button>
-        <nav class="list">
-          <a href="{{ SITEURL }}/#home" class="item" onclick="document.querySelector('.burger-button').classList.remove('active')">בית</a>
-          <a href="{{ SITEURL }}/#person" class="item" onclick="document.querySelector('.burger-button').classList.remove('active')">לפני שמתחילים</a>
-          <a href="{{ SITEURL }}/#process" class="item" onclick="document.querySelector('.burger-button').classList.remove('active')">המוצרים</a>
-          <a href="{{ SITEURL }}/#faq" class="item" onclick="document.querySelector('.burger-button').classList.remove('active')">שאלות נפוצות</a>
-          <a href="{{ SITEURL }}/#contacts" class="item" onclick="document.querySelector('.burger-button').classList.remove('active')">יצירת קשר</a>
+        <nav
+          id="mobile-navigation"
+          class="list"
+          aria-label="ניווט ראשי במובייל"
+          aria-hidden="true"
+          inert
+          data-mobile-menu-panel
+        >
+          <a href="{{ SITEURL }}/#home" class="item" tabindex="-1" data-mobile-menu-link>בית</a>
+          <a href="{{ SITEURL }}/#person" class="item" tabindex="-1" data-mobile-menu-link>לפני שמתחילים</a>
+          <a href="{{ SITEURL }}/#process" class="item" tabindex="-1" data-mobile-menu-link>המוצרים</a>
+          <a href="{{ SITEURL }}/#faq" class="item" tabindex="-1" data-mobile-menu-link>שאלות נפוצות</a>
+          <a href="{{ SITEURL }}/#contacts" class="item" tabindex="-1" data-mobile-menu-link>יצירת קשר</a>
         </nav>
       </div>
       <div class="logo">
         <img src="{{ SITEURL }}/theme/images/logo.svg" alt="" />
       </div>
-      <nav class="menu">
+      <nav class="menu" aria-label="ניווט ראשי">
         <a href="{{ SITEURL }}/#home" class="item">בית</a>
         <a href="{{ SITEURL }}/#person" class="item">לפני שמתחילים</a>
         <a href="{{ SITEURL }}/#process" class="item">המוצרים</a>
