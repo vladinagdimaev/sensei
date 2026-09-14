@@ -14,7 +14,16 @@ def run(*command: str) -> None:
 def build() -> None:
     run("npm", "ci")
     run("npm", "run", "build:css")
-    run(sys.executable, "-m", "pelican", "content", "-s", "pelicanconf.py")
+    run(
+        sys.executable,
+        "-m",
+        "pelican",
+        "content",
+        "-s",
+        "pelicanconf.py",
+        "-o",
+        "public",
+    )
 
 
 if __name__ == "__main__":

@@ -1,6 +1,7 @@
 .DS_Store
 _temp
 output/
+public/
 __pycache__/
 *.py[cod]
 
